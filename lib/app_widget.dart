@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gerador_de_animes/inicio.dart';
-import 'package:gerador_de_animes/gerador.dart';
+import 'package:gerador_de_animes/lista_animes.dart';
 
 Map<int, Color> color = {
   50: Colors.white,
@@ -28,7 +28,7 @@ class AppWidget extends StatelessWidget {
       initialRoute: '/inicio',
       routes: {
         '/inicio': (context) =>  Inicio(),
-        '/gerador': (context) =>  Gerador(),
+        '/lista': (context) =>   ListaAnimes(),
       },
     );
   }
