@@ -35,10 +35,12 @@ class _State extends State<Gerador> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.blue,
         title: const Center(
         child: Text("Gerador de animes",style: TextStyle(
                 color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),),
       ),
+      elevation: 1,
       ),
       body: Center(
         child: Container(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gerador_de_animes/gerador.dart';
+import 'package:gerador_de_animes/lista_animes.dart';
 void main() => runApp(Inicio());
 
 class Inicio extends StatelessWidget {
@@ -11,34 +11,25 @@ class Inicio extends StatelessWidget {
         body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children:  <Widget>[
-            const Text(
+          children: const <Widget>[
+            Text(
               'Seja bem vindo',style: TextStyle(
                 color: Colors.black, fontWeight: FontWeight.bold, fontSize: 32),
             ),
-            const SizedBox(
-                height: 20,),
-            ElevatedButton(
-                  child: const Text(
-                    'Continuar',
-                    style: TextStyle(fontSize: 20, color: Colors.white),
-                  ),
-                  onPressed: (){
-                    Navigator.push(
-                      context,
-                       MaterialPageRoute(
-                         builder: (context) => Gerador(),
-                    ),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    primary:const Color.fromARGB(255, 9, 103, 245),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 80, vertical: 10),
-                  )),
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed:(){
+                    Navigator.push(
+                      context,
+                       MaterialPageRoute(
+                         builder: (context) => ListaAnimes(),
+                    ),
+                    );
+                  },
+        child: const Icon(Icons.arrow_right_alt),
+      ), 
       ),
     );
   }
